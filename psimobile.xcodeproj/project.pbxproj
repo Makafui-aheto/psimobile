@@ -9,13 +9,39 @@
 /* Begin PBXBuildFile section */
 		923A06BE26FE014600F40612 /* psimobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06BD26FE014600F40612 /* psimobileApp.swift */; };
 		923A06C026FE014600F40612 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06BF26FE014600F40612 /* ContentView.swift */; };
-		923A06C226FE014700F40612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 923A06C126FE014700F40612 /* Assets.xcassets */; };
 		923A06C526FE014700F40612 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 923A06C426FE014700F40612 /* Preview Assets.xcassets */; };
 		923A06C726FE014700F40612 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06C626FE014700F40612 /* Persistence.swift */; };
 		923A06CA26FE014700F40612 /* psimobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 923A06C826FE014700F40612 /* psimobile.xcdatamodeld */; };
 		923A06D426FE014700F40612 /* psimobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06D326FE014700F40612 /* psimobileTests.swift */; };
 		923A06DE26FE014700F40612 /* psimobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06DD26FE014700F40612 /* psimobileUITests.swift */; };
 		923A06E026FE014700F40612 /* psimobileUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06DF26FE014700F40612 /* psimobileUITestsLaunchTests.swift */; };
+		923A06F826FE041900F40612 /* NavSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06EE26FE041900F40612 /* NavSearchView.swift */; };
+		923A06F926FE041900F40612 /* StudentProfile .swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06EF26FE041900F40612 /* StudentProfile .swift */; };
+		923A06FB26FE041900F40612 /* CourseDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06F126FE041900F40612 /* CourseDetailModel.swift */; };
+		923A06FC26FE041900F40612 /* ScrollableTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06F226FE041900F40612 /* ScrollableTab.swift */; };
+		923A06FD26FE041900F40612 /* blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06F326FE041900F40612 /* blur.swift */; };
+		923A06FE26FE041900F40612 /* Service .swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06F426FE041900F40612 /* Service .swift */; };
+		923A06FF26FE041900F40612 /* CourseProfile .swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06F526FE041900F40612 /* CourseProfile .swift */; };
+		923A070026FE041900F40612 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06F626FE041900F40612 /* RegistrationModel.swift */; };
+		923A070126FE041900F40612 /* RegistrationViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A06F726FE041900F40612 /* RegistrationViewModel .swift */; };
+		923A070A26FE048800F40612 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A070226FE048800F40612 /* LoginForm.swift */; };
+		923A070B26FE048800F40612 /* DetailedCourseView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A070326FE048800F40612 /* DetailedCourseView .swift */; };
+		923A070C26FE048800F40612 /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A070426FE048800F40612 /* HomeTab.swift */; };
+		923A070D26FE048800F40612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 923A070526FE048800F40612 /* Assets.xcassets */; };
+		923A070E26FE048800F40612 /* CourseTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A070626FE048800F40612 /* CourseTab.swift */; };
+		923A070F26FE048800F40612 /* Home_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A070726FE048800F40612 /* Home_Screen.swift */; };
+		923A071026FE048800F40612 /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A070826FE048800F40612 /* SignInForm.swift */; };
+		923A071126FE048800F40612 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923A070926FE048800F40612 /* Settings.swift */; };
+		923A072026FE0A0E00F40612 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 923A071F26FE0A0E00F40612 /* FirebaseAuth */; };
+		923A072426FE0A0E00F40612 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 923A072326FE0A0E00F40612 /* FirebaseDatabase */; };
+		923A072626FE0A0E00F40612 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 923A072526FE0A0E00F40612 /* FirebaseFirestore */; };
+		923A072A26FE0A0E00F40612 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 923A072926FE0A0E00F40612 /* FirebaseFunctions */; };
+		923A073026FE0A0E00F40612 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 923A072F26FE0A0E00F40612 /* FirebaseStorage */; };
+		923A073C26FE155700F40612 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923A073B26FE155700F40612 /* GoogleService-Info.plist */; };
+		923A073D26FE155700F40612 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923A073B26FE155700F40612 /* GoogleService-Info.plist */; };
+		923A073E26FE155700F40612 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923A073B26FE155700F40612 /* GoogleService-Info.plist */; };
+		928380E32732550600AB1C8C /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928380E22732550600AB1C8C /* VideoView.swift */; };
+		92AE6D0226FFE27000CE6F8B /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AE6D0126FFE27000CE6F8B /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +65,6 @@
 		923A06BA26FE014600F40612 /* psimobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = psimobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		923A06BD26FE014600F40612 /* psimobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = psimobileApp.swift; sourceTree = "<group>"; };
 		923A06BF26FE014600F40612 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		923A06C126FE014700F40612 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		923A06C426FE014700F40612 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		923A06C626FE014700F40612 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		923A06C926FE014700F40612 /* psimobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = psimobile.xcdatamodel; sourceTree = "<group>"; };
@@ -48,6 +73,26 @@
 		923A06D926FE014700F40612 /* psimobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = psimobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		923A06DD26FE014700F40612 /* psimobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = psimobileUITests.swift; sourceTree = "<group>"; };
 		923A06DF26FE014700F40612 /* psimobileUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = psimobileUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		923A06EE26FE041900F40612 /* NavSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavSearchView.swift; sourceTree = "<group>"; };
+		923A06EF26FE041900F40612 /* StudentProfile .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StudentProfile .swift"; sourceTree = "<group>"; };
+		923A06F126FE041900F40612 /* CourseDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailModel.swift; sourceTree = "<group>"; };
+		923A06F226FE041900F40612 /* ScrollableTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableTab.swift; sourceTree = "<group>"; };
+		923A06F326FE041900F40612 /* blur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = blur.swift; sourceTree = "<group>"; };
+		923A06F426FE041900F40612 /* Service .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Service .swift"; sourceTree = "<group>"; };
+		923A06F526FE041900F40612 /* CourseProfile .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CourseProfile .swift"; sourceTree = "<group>"; };
+		923A06F626FE041900F40612 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		923A06F726FE041900F40612 /* RegistrationViewModel .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegistrationViewModel .swift"; sourceTree = "<group>"; };
+		923A070226FE048800F40612 /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		923A070326FE048800F40612 /* DetailedCourseView .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DetailedCourseView .swift"; sourceTree = "<group>"; };
+		923A070426FE048800F40612 /* HomeTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
+		923A070526FE048800F40612 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		923A070626FE048800F40612 /* CourseTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTab.swift; sourceTree = "<group>"; };
+		923A070726FE048800F40612 /* Home_Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home_Screen.swift; sourceTree = "<group>"; };
+		923A070826FE048800F40612 /* SignInForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = "<group>"; };
+		923A070926FE048800F40612 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		923A073B26FE155700F40612 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		928380E22732550600AB1C8C /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		92AE6D0126FFE27000CE6F8B /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +100,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923A072026FE0A0E00F40612 /* FirebaseAuth in Frameworks */,
+				923A072626FE0A0E00F40612 /* FirebaseFirestore in Frameworks */,
+				923A073026FE0A0E00F40612 /* FirebaseStorage in Frameworks */,
+				923A072A26FE0A0E00F40612 /* FirebaseFunctions in Frameworks */,
+				923A072426FE0A0E00F40612 /* FirebaseDatabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,9 +148,11 @@
 		923A06BC26FE014600F40612 /* psimobile */ = {
 			isa = PBXGroup;
 			children = (
+				928380E12732547800AB1C8C /* Controllers  */,
+				923A06ED26FE03B800F40612 /* Model */,
+				923A06EC26FE039300F40612 /* View */,
 				923A06BD26FE014600F40612 /* psimobileApp.swift */,
 				923A06BF26FE014600F40612 /* ContentView.swift */,
-				923A06C126FE014700F40612 /* Assets.xcassets */,
 				923A06C626FE014700F40612 /* Persistence.swift */,
 				923A06C826FE014700F40612 /* psimobile.xcdatamodeld */,
 				923A06C326FE014700F40612 /* Preview Content */,
@@ -119,6 +171,7 @@
 		923A06D226FE014700F40612 /* psimobileTests */ = {
 			isa = PBXGroup;
 			children = (
+				923A073B26FE155700F40612 /* GoogleService-Info.plist */,
 				923A06D326FE014700F40612 /* psimobileTests.swift */,
 			);
 			path = psimobileTests;
@@ -131,6 +184,46 @@
 				923A06DF26FE014700F40612 /* psimobileUITestsLaunchTests.swift */,
 			);
 			path = psimobileUITests;
+			sourceTree = "<group>";
+		};
+		923A06EC26FE039300F40612 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				923A070626FE048800F40612 /* CourseTab.swift */,
+				923A070326FE048800F40612 /* DetailedCourseView .swift */,
+				923A070726FE048800F40612 /* Home_Screen.swift */,
+				923A070926FE048800F40612 /* Settings.swift */,
+				923A070526FE048800F40612 /* Assets.xcassets */,
+				923A070226FE048800F40612 /* LoginForm.swift */,
+				923A070426FE048800F40612 /* HomeTab.swift */,
+				923A070826FE048800F40612 /* SignInForm.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		923A06ED26FE03B800F40612 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				923A06F126FE041900F40612 /* CourseDetailModel.swift */,
+				923A06F526FE041900F40612 /* CourseProfile .swift */,
+				92AE6D0126FFE27000CE6F8B /* UserViewModel.swift */,
+				923A06F626FE041900F40612 /* RegistrationModel.swift */,
+				923A06F726FE041900F40612 /* RegistrationViewModel .swift */,
+				923A06F426FE041900F40612 /* Service .swift */,
+				923A06EF26FE041900F40612 /* StudentProfile .swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		928380E12732547800AB1C8C /* Controllers  */ = {
+			isa = PBXGroup;
+			children = (
+				923A06EE26FE041900F40612 /* NavSearchView.swift */,
+				923A06F226FE041900F40612 /* ScrollableTab.swift */,
+				923A06F326FE041900F40612 /* blur.swift */,
+				928380E22732550600AB1C8C /* VideoView.swift */,
+			);
+			path = "Controllers ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +242,13 @@
 			dependencies = (
 			);
 			name = psimobile;
+			packageProductDependencies = (
+				923A071F26FE0A0E00F40612 /* FirebaseAuth */,
+				923A072326FE0A0E00F40612 /* FirebaseDatabase */,
+				923A072526FE0A0E00F40612 /* FirebaseFirestore */,
+				923A072926FE0A0E00F40612 /* FirebaseFunctions */,
+				923A072F26FE0A0E00F40612 /* FirebaseStorage */,
+			);
 			productName = psimobile;
 			productReference = 923A06BA26FE014600F40612 /* psimobile.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +321,9 @@
 				Base,
 			);
 			mainGroup = 923A06B126FE014600F40612;
+			packageReferences = (
+				923A071626FE0A0E00F40612 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 923A06BB26FE014600F40612 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,7 +341,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				923A06C526FE014700F40612 /* Preview Assets.xcassets in Resources */,
-				923A06C226FE014700F40612 /* Assets.xcassets in Resources */,
+				923A070D26FE048800F40612 /* Assets.xcassets in Resources */,
+				923A073C26FE155700F40612 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923A073D26FE155700F40612 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923A073E26FE155700F40612 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +369,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923A070C26FE048800F40612 /* HomeTab.swift in Sources */,
+				923A06F926FE041900F40612 /* StudentProfile .swift in Sources */,
+				923A06FC26FE041900F40612 /* ScrollableTab.swift in Sources */,
+				923A071026FE048800F40612 /* SignInForm.swift in Sources */,
+				923A070126FE041900F40612 /* RegistrationViewModel .swift in Sources */,
 				923A06C726FE014700F40612 /* Persistence.swift in Sources */,
+				923A070026FE041900F40612 /* RegistrationModel.swift in Sources */,
+				923A06F826FE041900F40612 /* NavSearchView.swift in Sources */,
+				923A070F26FE048800F40612 /* Home_Screen.swift in Sources */,
+				923A06FF26FE041900F40612 /* CourseProfile .swift in Sources */,
 				923A06C026FE014600F40612 /* ContentView.swift in Sources */,
 				923A06CA26FE014700F40612 /* psimobile.xcdatamodeld in Sources */,
+				923A070A26FE048800F40612 /* LoginForm.swift in Sources */,
+				923A06FE26FE041900F40612 /* Service .swift in Sources */,
+				923A070B26FE048800F40612 /* DetailedCourseView .swift in Sources */,
+				923A070E26FE048800F40612 /* CourseTab.swift in Sources */,
 				923A06BE26FE014600F40612 /* psimobileApp.swift in Sources */,
+				923A071126FE048800F40612 /* Settings.swift in Sources */,
+				923A06FD26FE041900F40612 /* blur.swift in Sources */,
+				92AE6D0226FFE27000CE6F8B /* UserViewModel.swift in Sources */,
+				928380E32732550600AB1C8C /* VideoView.swift in Sources */,
+				923A06FB26FE041900F40612 /* CourseDetailModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"psimobile/Preview Content\"";
+				DEVELOPMENT_TEAM = U3D9JQ7N77;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -456,6 +581,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"psimobile/Preview Content\"";
+				DEVELOPMENT_TEAM = U3D9JQ7N77;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -484,6 +610,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U3D9JQ7N77;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -508,6 +635,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U3D9JQ7N77;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -531,6 +659,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U3D9JQ7N77;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -553,6 +682,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U3D9JQ7N77;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -609,6 +739,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		923A071626FE0A0E00F40612 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		923A071F26FE0A0E00F40612 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923A071626FE0A0E00F40612 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		923A072326FE0A0E00F40612 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923A071626FE0A0E00F40612 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		923A072526FE0A0E00F40612 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923A071626FE0A0E00F40612 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		923A072926FE0A0E00F40612 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923A071626FE0A0E00F40612 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		923A072F26FE0A0E00F40612 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923A071626FE0A0E00F40612 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		923A06C826FE014700F40612 /* psimobile.xcdatamodeld */ = {

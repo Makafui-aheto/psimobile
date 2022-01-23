@@ -8,38 +8,142 @@
 import SwiftUI
 import CoreData
 
+struct SubjectOverlay: View{
+    
+    @State var showCompanyLogo = true
+    @State var propels = true
+    
+    
+    var body: some View{
+        VStack(alignment:.center){
+            if showCompanyLogo {
+                
+                HStack{
+                    Image(systemName: "globe")
+                        .foregroundColor(.white)
+                        .font(Font.title.weight(.bold))
+                    Text("Psi Learning")
+                        .font(.largeTitle)
+                        .multilineTextAlignment(.center)
+                        .padding(6)
+                        .foregroundColor(.white)
+                }
+                .opacity(propels ? 1:0)
+                .position(y: showCompanyLogo ? 100 : 0)
+                .offset(x:UIScreen.main.bounds.size.width/2, y:propels ? 50 : -300)
+                
+                .animation(Animation.easeInOut(duration:3).delay(3).repeatCount(0, autoreverses: false))
+                
+                Text("Development of learning. \n Training for you.")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .opacity(propels ? 0:1)
+                    .position(y: showCompanyLogo ? 100 : 0)
+                    .offset(x:UIScreen.main.bounds.size.width/2, y:propels ? -250 :-400)
+                  
+                    .animation(Animation.easeInOut(duration:3).delay(3).repeatCount(0, autoreverses: false))
+                
+                }
+            }
+            .onAppear(){
+                self.propels.toggle()
+            }
+            Spacer()
+        
+            
+        }
+    
+            
+    }
+
+
+
+
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+    @State var offset: CGFloat = 0
+    @State private var showLoginView = false
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        
+        let imageArray: [String] = ["background", "studying", "students"]
+        
+    
+        GeometryReader{ geom in
+            
+            let rect = geom.frame(in: .global)
+            
+            NavigationView{
+                
+                ScrollableTab(tabs:tabs, rect:geom.frame(in: .global), offset:$offset){
+                                    
+                                HStack(spacing: 0){
+                                    
+                                    ForEach(imageArray, id: \.self){ image in
+                                        Image(image)
+                                            .resizable()
+                                            .renderingMode(.original)
+                                            .ignoresSafeArea()
+                                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                            .frame(width: rect.width)
+                                            .opacity(0.8)
+                                            .accentColor(.black)
+                                            .cornerRadius(0)
+                                            .edgesIgnoringSafeArea(.all)
+                                            .overlay(Rectangle().foregroundColor(.black).opacity(0.25).edgesIgnoringSafeArea(.all).ignoresSafeArea(.all))
+                                            .overlay(SubjectOverlay(), alignment: .center)
+                                    }
+                                    .ignoresSafeArea(.all)
+
+                                    }
+                                .ignoresSafeArea(.all)
+                            }
+                            .edgesIgnoringSafeArea(.all)
+                            .ignoresSafeArea(.all)
+                            .overlay(
+                                VStack{
+                                    NavigationLink(destination: LoginForm() ){
+                                        Text("Sign Up")
+                                    }
+                                    .frame(width:UIScreen.main.bounds.width * 0.9, height:35)
+                                    .background(Color.white)
+                                    .cornerRadius(5)
+                                    .padding()
+                                    .foregroundColor(.black)
+                    
+                                
+                                    NavigationLink(destination: SignInForm()){
+                                        Text("Sign In")
+                                    }
+                                    .padding(.bottom)
+                                    .foregroundColor(.white)
+                                    
+                                    
+                                
+                                }
+                                
+                                , alignment: .bottom)
+            
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                
+                
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+            
+            
+         
             }
-            Text("Select an item")
-        }
+            .ignoresSafeArea(.all)
+            .edgesIgnoringSafeArea(.all)
+            .navigationBarHidden(true)
+            .navigationViewStyle(StackNavigationViewStyle())
+        
+       
     }
 
     private func addItem() {
@@ -82,7 +186,18 @@ private let itemFormatter: DateFormatter = {
 }()
 
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
+            .padding(-2)
+            //.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            
     }
 }
+
+
+
+    
+
+
+var tabs = ["background", "studying", "students"]

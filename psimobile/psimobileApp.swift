@@ -6,15 +6,31 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 @main
 struct psimobileApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
+            if (Auth.auth().currentUser != nil){
+                Home_Screen()
+            }else{
+                
+                ContentView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                    .environmentObject(UserAuthentication())
+                
+            }
+            
         }
     }
 }
