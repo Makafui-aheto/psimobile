@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct ScrollableTab <Content: View>: UIViewRepresentable{
+
+
+    var content: Content
+
+    var rect: CGRect
+
+    var tabs: [Any]
+
+    @Binding var offset: CGFloat
+
     func updateUIView(_ uiView: UIViewType, context: Context) {
         
     }
-    
-    
-    var content: Content
-    
-    var rect: CGRect
-    
-    var tabs: [Any]
-    
-    @Binding var offset: CGFloat
     
     let scrollView = UIScrollView()
     
