@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct StudentProfile{
-    
     var email: String
     var password:String
     var firstName: String

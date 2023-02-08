@@ -52,7 +52,7 @@ struct ScrollableTab <Content: View>: UIViewRepresentable{
     
     }
     
-    func updateUIVidew(_ uiView: UIScrollView, context: Context) {
+    func updateUIVideo(_ uiView: UIScrollView, context: Context) {
         if uiView.contentOffset.x != offset{
             uiView.contentOffset.x = offset
         }

@@ -14,7 +14,7 @@ struct NavSearchView: UIViewControllerRepresentable{
     func makeCoordinator() -> Coordinator {
         return NavSearchView.Coordinator(parent:self)
     }
-    
+
     
     var view:  AnyView
     

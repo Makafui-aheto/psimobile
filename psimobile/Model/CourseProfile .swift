@@ -11,7 +11,7 @@ import SwiftUI
 
 struct courseProfile: Identifiable{
     
-    var id = UUID().uuidString
+    let id = UUID().uuidString
     var courseProfilePic: String
     var uploadTime: UIDatePicker.Mode
     var courseTitle: String
