@@ -105,15 +105,15 @@ class CourseModel: ObservableObject{
         data.append("\r\n--\(boundary)--\r\n".data(using: .utf8)!)
 
 
-        let uploadtask = session.uploadTask(with: urlRequest,
-                from: data, completionHandler: <#T##@escaping @Sendable (Data?, URLResponse?, Error?) -> Void##@escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void#>){ (data, response, error) in
-
-            if let error = error{completion(.failure(error))}
-
-            let encoder = JSONEncoder
-
-
-        }
+//        let uploadtask = session.uploadTask(with: urlRequest,
+//                from: data, completionHandler: <#T##@escaping @Sendable (Data?, URLResponse?, Error?) -> Void##@escaping @Sendable (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void#>){ (data, response, error) in
+//
+//            if let error = error{completion(.failure(error))}
+//
+//            let encoder = JSONEncoder
+//
+//
+//        }
 
 
         return "Success"

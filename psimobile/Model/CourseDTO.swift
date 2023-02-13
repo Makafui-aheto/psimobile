@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct CourseDTO: Hashable, Decodable, Encodable{
+struct CourseDTO: Hashable, Decodable, Encodable, Identifiable{
 
     let videoTitle: String
     let thumbNailPath: String
