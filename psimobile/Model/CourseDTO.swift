@@ -10,7 +10,9 @@ struct CourseDTO: Hashable, Decodable, Encodable, Identifiable{
     let thumbNailPath: String
     let author: String
     let videoDescription: String
-    let videoURL: String
+    let videoURL: [String]
+    let subjectName: String
+    let practiceArea: String
 
     private enum CodingKeys: String, CodingKey{
         case videoTitle, thumbNailPath, author, videoDescription, videoURL

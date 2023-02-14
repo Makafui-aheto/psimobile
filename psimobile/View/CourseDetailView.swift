@@ -3,6 +3,9 @@
 //
 
 import Foundation
+import AVFoundation
+import SwiftUI
+import AVKit
 
 struct CourseDetailView: View {
 
@@ -10,6 +13,7 @@ struct CourseDetailView: View {
     var animation: Namespace.ID
     @State private var istoggled = false
     var xmarktoggled = false
+    var introductoryVideoUrl: String
     @Environment(\.colorScheme) var colorScheme
 
 
@@ -17,7 +21,9 @@ struct CourseDetailView: View {
 
         let author = "By:\t" + courseData.author
 
-        if (courseData.selectedCourse != nil){
+        let video = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: introductoryVideoUrl, ofType: "mp4")))
+
+
 
             ZStack{
 
@@ -26,54 +32,28 @@ struct CourseDetailView: View {
                         .ignoresSafeArea()
                         .onTapGesture{
                             withAnimation{
-                                courseData.showCourseDetails.toggle()
+                                istoggled.toggle()
                             }
 
-                        }
-
-                //Rectangle()
-                // .foregroundColor(.white)
-                // .frame(width:350, height:500)
-                //.cornerRadius(10)
 
                 VStack{
 
                     VStack(alignment:.leading){
 
-                        Image(courseData.selectedCourse.courseProfilePic)
-                                .resizable()
-                                .renderingMode(.original)
+                        VideoPlayer(player: video)
+                                .frame(width: 320, height: 135)
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width:320, height:135)
-                                .matchedGeometryEffect(id: courseData.selectedCourse.id, in: animation)
-                                .background(
-                                        Color(.black)
-                                                .opacity(0.1)
-                                                .onTapGesture {
-                                                    withAnimation {
-                                                        courseData.selectedCourse=nil
-                                                        courseData.showCourseDetails.toggle()
-
-                                                    }
-                                                }
-
-
-                                )
+                                .symbolRenderingMode(.multicolor)
+                                .matchedGeometryEffect(id: UUID().uuidString, in: amination)
                                 .padding(.init(top: 0, leading: 10, bottom: 20, trailing: 10))
                                 .cornerRadius(5)
-                                .overlay(
-
-                                        Image(systemName:"play")
-                                                .foregroundColor(.white)
-
-                                )
 
                         Text("COURSE")
                                 .font(.none)
                                 .foregroundColor(.gray)
                                 .padding(.init(top: 0, leading: 30, bottom: 5, trailing: 10))
 
-                        Text(courseData.selectedCourse.courseTitle)
+                        Text(courseData.videoTitle)
                                 .font(.title)
                                 .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
                                 .padding(.init(top: 0, leading: 30, bottom: 5, trailing: 10))
@@ -83,7 +63,7 @@ struct CourseDetailView: View {
                                 .foregroundColor(.gray)
                                 .padding(.init(top: 0, leading: 30, bottom: 5, trailing: 10))
 
-                        Text(courseData.selectedCourse.courseDescription)
+                        Text(courseData.videoDescription)
                                 .foregroundColor(.gray)
                                 .padding(.init(top: 0, leading: 30, bottom: 20, trailing: 10))
 
@@ -132,14 +112,10 @@ struct CourseDetailView: View {
 
             }
 
-
-        }
-
-
-
-
     }
 
 
 
 }
+}
+
