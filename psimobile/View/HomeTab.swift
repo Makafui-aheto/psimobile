@@ -71,7 +71,10 @@ struct Home: View{
                                                 .frame(width:UIScreen.main.bounds.width*0.85, height:180)
                                                 .mask(
 
-                                                        LinearGradient(gradient: Gradient(stops:[.init(color:Color(UIColor.systemBackground), location:0), .init(color:Color(UIColor.systemBackground), location:0), .init(color: Color(UIColor.systemBackground).opacity(0), location: 0.6)]), startPoint: .bottomTrailing, endPoint: .bottomLeading)
+                                                        LinearGradient(gradient: Gradient(stops:[.init(color:Color(UIColor.systemBackground), location:0),
+                                                                                                 .init(color:Color(UIColor.systemBackground), location:0),
+                                                                                                 .init(color: Color(UIColor.systemBackground).opacity(0),
+                                                                                                         location: 0.6)]), startPoint: .bottomTrailing, endPoint: .bottomLeading)
 
 
                                                 )

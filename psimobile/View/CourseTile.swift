@@ -12,6 +12,8 @@ struct CourseTile: View {
 
     var imageView: UIImageView!
 
+    @State var isHovered: Bool = false
+
     @Binding var courses: [CourseDTO]
 
     var animation: Namespace.ID
@@ -24,20 +26,33 @@ struct CourseTile: View {
 
                 ForEach($courses){  course in
 
-                   imageView.loadFrom(URLAddress: course.videoUrl)
+                    imageView.loadFrom(URLAddress: course.thumbNailPath)
                             .resizable()
                             .renderingMode(.original)
                             .aspectRatio(contentMode: .fill)
-                            .frame(width:50, height:100)
+                            .frame(width: isHovered ? 320 : 50, height:150)
                             .matchedGeometryEffect(id: UUID().uuidString, in: animation)
+                            .padding(.init(top: 0, leading: 10, bottom: 20, trailing: 10))
+
+                    if isHovered{
+
+                    }
+
+
                 }
 
             }
-                    .frame(width:50, height:180)
+                    .frame(width: isHovered ? 320:50, height: isHovered ? 450:250)
                     .foregroundColor(Color(UIColor.systemBackground))
                     .background(Color(UIColor.systemBackground))
                     .cornerRadius(10)
                     .padding(15)
+                    .onHover { isHovered in
+                        withAnimation {
+                            self.isHovered = true
+                        }
+
+                    }
 
         }
 
