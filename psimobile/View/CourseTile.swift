@@ -8,51 +8,64 @@ import SwiftUI
 
 struct CourseTile: View {
 
-    @EnvironmentObject var courseModel: CourseModel
+    var courseModel: CourseModel
 
     var imageView: UIImageView!
 
-    @State var isHovered: Bool = false
+    var istoggled: Bool
 
     @Binding var courses: [CourseDTO]
 
     var animation: Namespace.ID
 
+
+    private func getScale(proxy: GeometryProxy) -> CGFloat{
+        var scale: CGFloat = 1
+
+        let x = proxy.frame(in: .global).minX
+
+        let diff = abs(x-32)
+
+        if diff < 100{
+            scale = 1 + (100-diff)/500
+        }
+
+        return scale
+    }
+
     var body: some View{
 
-        VStack{
 
-            VStack(alignment:.leading){
 
-                ForEach($courses){  course in
+                ScrollView(.horizontal, showsIndicators: false) {
 
-                    imageView.loadFrom(URLAddress: course.thumbNailPath)
-                            .resizable()
-                            .renderingMode(.original)
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: isHovered ? 320 : 50, height:150)
-                            .matchedGeometryEffect(id: UUID().uuidString, in: animation)
-                            .padding(.init(top: 0, leading: 10, bottom: 20, trailing: 10))
+                    VStack{
 
-                    if isHovered{
+                        HStack(spacing: 15) {
+
+                            ForEach($courses) { course in
+
+                                Button(action: { withAnimation{istoggled = true} }, label: {
+
+                                    imageView.loadFrom(URLAddress: course.thumbNailPath)
+                                            .resizable()
+                                            .renderingMode(.original)
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 170, height: 100)
+                                            .matchedGeometryEffect(id: UUID().uuidString, in: animation)
+
+                                    })
+
+
+                            }
+
+                        }
 
                     }
 
 
                 }
 
-            }
-                    .frame(width: isHovered ? 320:50, height: isHovered ? 450:250)
-                    .foregroundColor(Color(UIColor.systemBackground))
-                    .background(Color(UIColor.systemBackground))
-                    .cornerRadius(10)
-                    .padding(15)
-                    .onHover { isHovered in
-                        withAnimation {
-                            self.isHovered = true
-                        }
-
-                    }
 
         }
 
@@ -60,7 +73,6 @@ struct CourseTile: View {
 
     }
 
-}
 
 extension UIImageView{
 
