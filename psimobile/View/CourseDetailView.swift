@@ -7,12 +7,13 @@ import AVFoundation
 import SwiftUI
 import AVKit
 
+@available(iOS 15.0, *)
 struct CourseDetailView: View {
 
-    var courseData: courseDTO
+    var courseData: CourseDTO
     var animation: Namespace.ID
     @State private var istoggled = false
-    var xmarktoggled = false
+    @State private var xmarktoggled = false
     var introductoryVideoUrl: String
     @Environment(\.colorScheme) var colorScheme
 
@@ -21,9 +22,7 @@ struct CourseDetailView: View {
 
         let author = "By:\t" + courseData.author
 
-        let video = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: introductoryVideoUrl, ofType: "mp4")))
-
-
+        let video = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: introductoryVideoUrl, ofType: "mp4")!))
 
             ZStack{
 
@@ -44,7 +43,6 @@ struct CourseDetailView: View {
                                 .frame(width: 320, height: 135)
                                 .aspectRatio(contentMode: .fill)
                                 .symbolRenderingMode(.multicolor)
-                                .matchedGeometryEffect(id: UUID().uuidString, in: amination)
                                 .padding(.init(top: 0, leading: 10, bottom: 20, trailing: 10))
                                 .cornerRadius(5)
 
@@ -94,7 +92,7 @@ struct CourseDetailView: View {
 
                     Button(action:{
                         withAnimation{
-                            xmarktoggled.toggle()
+                            xmarktoggled = true
                         }
 
                     }){

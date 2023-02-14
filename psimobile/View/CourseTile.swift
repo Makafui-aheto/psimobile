@@ -8,11 +8,9 @@ import SwiftUI
 
 struct CourseTile: View {
 
-    var courseModel: CourseModel
-
     var imageView: UIImageView!
 
-    var istoggled: Bool
+    @State var istoggled: Bool = false
 
     @Binding var courses: [CourseDTO]
 
@@ -45,9 +43,13 @@ struct CourseTile: View {
 
                             ForEach($courses) { course in
 
+                                let thumbNailUrl = course.thumbNailPath.wrappedValue
+
+                                 let image = imageView.loadFrom(URLAddress: thumbNailUrl)
+
                                 Button(action: { withAnimation{istoggled = true} }, label: {
 
-                                    imageView.loadFrom(URLAddress: course.thumbNailPath)
+                                        Image(uiImage: image)
                                             .resizable()
                                             .renderingMode(.original)
                                             .aspectRatio(contentMode: .fill)
@@ -76,9 +78,9 @@ struct CourseTile: View {
 
 extension UIImageView{
 
-    func loadFrom(URLAddress: String){
+    func loadFrom(URLAddress: String)->UIImage{
 
-        guard let imageUrl = URL(string: URLAddress) else {return }
+        guard let imageUrl = URL(string: URLAddress) else {return self.image!}
 
         DispatchQueue.main.async{ [weak self] in
 
@@ -89,6 +91,8 @@ extension UIImageView{
             }
 
         }
+
+        return self.image!
     }
 
 }
