@@ -57,7 +57,7 @@ class CourseModel: ObservableObject{
 
 
     func postData<T: Codable>(for apiURL: String,
-                                        completion: @escaping ()->Void , parameters: Dictionary<String, T>? = [:],
+                                        completion: @escaping (Result<Any, Error>)->Void , parameters: Dictionary<String, T>? = [:],
                                         object: [Any] = [],
                                         images: Dictionary<String, UIImage> = [:]) async throws -> Any{
 

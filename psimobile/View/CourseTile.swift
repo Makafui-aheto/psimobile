@@ -10,25 +10,13 @@ struct CourseTile: View {
 
     var imageView: UIImageView!
 
-    @State var istoggled: Bool = false
+    @State var istoggled: Bool
 
-    @Binding var courses: [CourseDTO]
+    var courses: [CourseDTO]
 
-    var animation: Namespace.ID
-
-
-    private func getScale(proxy: GeometryProxy) -> CGFloat{
-        var scale: CGFloat = 1
-
-        let x = proxy.frame(in: .global).minX
-
-        let diff = abs(x-32)
-
-        if diff < 100{
-            scale = 1 + (100-diff)/500
-        }
-
-        return scale
+    init(istoggled: Bool, courses: [CourseDTO]) {
+        self.istoggled = istoggled
+        self.courses = courses
     }
 
     var body: some View{
@@ -41,20 +29,23 @@ struct CourseTile: View {
 
                         HStack(spacing: 15) {
 
-                            ForEach($courses) { course in
+                            ForEach(courses) { course in
 
-                                let thumbNailUrl = course.thumbNailPath.wrappedValue
+                                let thumbNailUrl = course.thumbNailPath
 
                                  let image = imageView.loadFrom(URLAddress: thumbNailUrl)
 
-                                Button(action: { withAnimation{istoggled = true} }, label: {
+                                Button(action: { withAnimation{
+                                    istoggled = true
+
+                                } }, label: {
 
                                         Image(uiImage: image)
                                             .resizable()
                                             .renderingMode(.original)
                                             .aspectRatio(contentMode: .fill)
                                             .frame(width: 170, height: 100)
-                                            .matchedGeometryEffect(id: UUID().uuidString, in: animation)
+                                                .padding(.init(top: 0, leading: 10, bottom: 20, trailing: 10))
 
                                     })
 
